@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { FaHtml5, FaCss3, FaJs, FaReact } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
-import { motion } from 'framer-motion';
 
 // About, Experience, Education, and Skills Data
 const about = {
@@ -76,7 +75,9 @@ const skills = {
 const Resume = () => {
   const [activeSection, setActiveSection] = useState('about');
 
-  const button = [{name:"About",id:"about"},{name:"Experience",id:"experience"},{name:"Education",id:"education"},{name:"Skills",id:"skills"}]
+  const button = [{name:"About Me",id:"about"},{name:"Experience",id:"experience"},{name:"Education",id:"education"},{name:"Skills",id:"skills"}]
+
+
   return (
     <div  className='flex flex-row'>
       <div className='flex flex-col gap-8'>
@@ -90,29 +91,23 @@ const Resume = () => {
      
       <div>
         {activeSection === 'about' && (
-          <div>
-          <h2 className='text4xl font-bold'>{about.title}</h2>
+          <div className='flex flex-col gap-[30px]'>
+          <h2 className='text-4xl font-bold'>{about.title}</h2>
           <p className='max-m-[600px] text-white/60 mx-auto'>{about.description}</p>
-          <div className='overflow-y-auto h-[400px]'>
-            <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
+            <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto'>
               {about.info.map((item, index) => {
-                return <li key={index} className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
-                  <span className='text-[#00FF99]'>{item.duration}</span>
-                  <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>{item.position}</h3>
-                  <div className='flex items-center gap-3'>
-                    <span className='w-[6px] h-[6px] rounded-full bg-[#00FF99]'></span>
-                    <p>{item.company}</p>
-                  </div>
+                return <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
+                  <span className='text-white/60'>{item.fieldName}</span>
+                  <span className='text-xl'>{item.fieldValue}</span>
                 </li>
               })}
             </ul>
-          </div>
         </div>
         )}
 
         {activeSection === 'experience' && (
           <div>
-            <h2 className='text4xl font-bold'>{experience.title}</h2>
+            <h2 className='text-4xl font-bold'>{experience.title}</h2>
             <p className='max-m-[600px] text-white/60 mx-auto'>{experience.description}</p>
             <div className='overflow-y-auto h-[400px]'>
               <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
@@ -133,7 +128,7 @@ const Resume = () => {
 
         {activeSection === 'education' && (
           <div>
-          <h2 className='text4xl font-bold'>{education.title}</h2>
+          <h2 className='text-4xl font-bold'>{education.title}</h2>
           <p className='max-m-[600px] text-white/60 mx-auto'>{education.description}</p>
           <div className='overflow-y-auto h-[400px]'>
             <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
