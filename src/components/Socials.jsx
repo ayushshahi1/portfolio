@@ -26,6 +26,7 @@ const Socials = () => {
             key={index}
             href={item.path}
             className="w-9 h-9 border border-[#00FF99]  rounded-full flex justify-center items-center text-[#00FF99] text-base hover:bg-[#00FF99] hover:text-black hover:transition-all duration-500"
+            target="_blank"
           >
             {item.icon}
           </Link>

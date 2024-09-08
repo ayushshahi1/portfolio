@@ -26,7 +26,7 @@ const projects = [
       { name: "Express" },
       { name: "Mongo Db" },
     ],
-    image: "",
+    image: "/assets/ministore.PNG",
     github: "https://github.com/ayushshahi1/Ministore-Front",
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     description:
       "It is a simple searching page where we can search something like google.",
     stack: [{ name: "Html" }, { name: "Tailwind Css" }, { name: "Next JS" }],
-    image: "",
+    image: "/assets/wikipedia.PNG",
     github: "https://github.com/ayushshahi1/wikipedia-search",
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     description:
       "In this project, I imported api through TMDB website and use it in my own project.",
     stack: [{ name: "Html" }, { name: "Tailwind Css" }, { name: "React JS" }],
-    image: "",
+    image: "/assets/tmdb.PNG",
     github: "https://github.com/ayushshahi1/Movie-database/tree/movie",
   },
 ];
@@ -93,6 +93,7 @@ const Work = () => {
                 <Link
                   href={project.github}
                   className="relative group flex items-center"
+                  target="_blank"
                 >
                   <BsGithub className="text-white text-3xl group-hover:text-[#00FF99]" />
                   <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -119,7 +120,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-fill"
                         />
                       </div>
                     </div>
