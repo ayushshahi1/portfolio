@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <header className="p-15 mx-auto flex justify-between items-center mb-20">
+    <header className="p-15 mx-auto flex justify-between items-center">
       <Link href="/">
         <h1 className="text-4xl font-semibold">Ayush Shahi</h1>
       </Link>

@@ -37,16 +37,12 @@ const page = () => {
       }}
       className="py-6"
     >
-      <div className="conatainer mx-auto">
+      <div className="conatainer mx-auto mt-20">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none ">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-[#00FF99]">Let's work together</h3>
-              <p className="text-white/60">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-                neque, recusandae repudiandae doloremque odio harum quo
-                doloribus laborum quos culpa.
-              </p>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   className={inputStyle}
@@ -71,7 +67,7 @@ const page = () => {
               </div>
             </form>
           </div>
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="flex-1 flex items-center xl:justify-center order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => {
                 return (

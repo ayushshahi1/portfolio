@@ -85,7 +85,7 @@ const Resume = () => {
   ];
 
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row mt-20">
       <div className="flex flex-col gap-8 w-[calc(100%/3)] items-center">
         {button.map((item, index) => {
           return (

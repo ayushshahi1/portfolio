@@ -6,7 +6,7 @@ import Stats from '../components/Stats'
 
 const Home = () => {
   return (
-    <section className='h-full'>
+    <section className='h-full mt-20'>
       <div className='container ms-auto h-full'>
         <div className='flex flex-col xl:flex-row items-center justify-between'>
           <div className='text-center order-2 xl:order-none'>
